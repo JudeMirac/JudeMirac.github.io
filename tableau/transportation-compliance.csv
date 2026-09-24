@@ -1,0 +1,45 @@
+compliance_id,contractor_name,audit_date,audit_type,score,finding_count,corrective_action_due,corrective_action_closed,overdue_open_flag,report_as_of
+1,Liberty Transit Services,2026-05-30,Safety Audit,94.0,1,2026-08-15,No,1,2026-09-24
+2,Liberty Transit Services,2026-07-24,Vehicle Inspection,88.0,3,2026-08-12,No,1,2026-09-24
+3,Liberty Transit Services,2026-04-11,Vehicle Inspection,85.0,4,2026-08-09,No,1,2026-09-24
+4,Liberty Transit Services,2026-06-14,Driver File Review,89.0,2,2026-08-06,No,1,2026-09-24
+5,Liberty Transit Services,2026-05-10,Driver File Review,88.0,3,2026-08-03,No,1,2026-09-24
+6,Liberty Transit Services,2026-07-31,Contract Compliance,85.0,4,2026-08-15,No,1,2026-09-24
+7,Keystone Mobility,2026-07-24,Vehicle Inspection,86.0,3,2026-08-23,No,1,2026-09-24
+8,Keystone Mobility,2026-05-13,Contract Compliance,75.0,5,2026-06-12,Yes,0,2026-09-24
+9,Keystone Mobility,2026-08-19,Driver File Review,79.0,3,2026-09-03,Yes,0,2026-09-24
+10,Keystone Mobility,2026-04-15,Driver File Review,81.0,4,2026-05-15,Yes,0,2026-09-24
+11,Keystone Mobility,2026-03-15,Driver File Review,93.0,1,2026-04-14,Yes,0,2026-09-24
+12,Delaware Valley Transport,2026-04-07,Vehicle Inspection,86.0,2,2026-05-07,Yes,0,2026-09-24
+13,Delaware Valley Transport,2026-08-09,Safety Audit,95.0,0,2026-09-08,Yes,0,2026-09-24
+14,Delaware Valley Transport,2026-07-02,Vehicle Inspection,95.0,2,2026-07-17,Yes,0,2026-09-24
+15,Delaware Valley Transport,2026-05-11,Driver File Review,92.0,3,2026-06-10,Yes,0,2026-09-24
+16,Delaware Valley Transport,2026-05-23,Vehicle Inspection,72.0,6,2026-06-07,No,1,2026-09-24
+17,Delaware Valley Transport,2026-06-26,Vehicle Inspection,71.0,4,2026-07-11,Yes,0,2026-09-24
+18,Delaware Valley Transport,2026-07-22,Contract Compliance,84.0,2,2026-09-05,No,1,2026-09-24
+19,MetroLink Operations,2026-05-10,Driver File Review,85.0,2,2026-06-09,Yes,0,2026-09-24
+20,MetroLink Operations,2026-06-01,Driver File Review,89.0,2,2026-07-01,Yes,0,2026-09-24
+21,MetroLink Operations,2026-07-07,Safety Audit,93.0,2,2026-08-21,Yes,0,2026-09-24
+22,MetroLink Operations,2026-07-06,Safety Audit,78.0,4,2026-08-20,Yes,0,2026-09-24
+23,CityRide Partners,2026-08-27,Contract Compliance,86.0,3,2026-10-11,Yes,0,2026-09-24
+24,CityRide Partners,2026-05-27,Vehicle Inspection,78.0,5,2026-07-11,Yes,0,2026-09-24
+25,CityRide Partners,2026-07-03,Safety Audit,94.0,1,2026-08-02,Yes,0,2026-09-24
+26,CityRide Partners,2026-07-26,Contract Compliance,75.0,4,2026-08-10,No,1,2026-09-24
+27,CityRide Partners,2026-05-23,Safety Audit,99.0,1,2026-06-22,Yes,0,2026-09-24
+28,Regional Access Transit,2026-06-04,Driver File Review,76.0,5,2026-07-19,Yes,0,2026-09-24
+29,Regional Access Transit,2026-07-08,Contract Compliance,73.0,6,2026-08-07,No,1,2026-09-24
+30,Regional Access Transit,2026-09-29,Driver File Review,80.0,3,2026-10-14,No,0,2026-09-24
+31,Regional Access Transit,2026-04-05,Driver File Review,89.0,3,2026-04-20,Yes,0,2026-09-24
+32,Regional Access Transit,2026-07-26,Contract Compliance,94.0,3,2026-08-25,Yes,0,2026-09-24
+33,Independence Transportation,2026-06-18,Vehicle Inspection,74.0,5,2026-07-18,No,1,2026-09-24
+34,Independence Transportation,2026-05-17,Contract Compliance,79.0,4,2026-07-01,Yes,0,2026-09-24
+35,Independence Transportation,2026-04-10,Contract Compliance,71.0,5,2026-05-10,Yes,0,2026-09-24
+36,Independence Transportation,2026-09-08,Vehicle Inspection,70.0,7,2026-09-23,Yes,0,2026-09-24
+37,Independence Transportation,2026-05-06,Vehicle Inspection,96.0,1,2026-05-21,Yes,0,2026-09-24
+38,Independence Transportation,2026-07-06,Driver File Review,95.0,0,2026-08-20,Yes,0,2026-09-24
+39,Franklin Coach Group,2026-06-07,Driver File Review,75.0,5,2026-07-22,Yes,0,2026-09-24
+40,Franklin Coach Group,2026-06-29,Safety Audit,94.0,3,2026-07-29,Yes,0,2026-09-24
+41,Franklin Coach Group,2026-07-05,Driver File Review,78.0,5,2026-08-19,Yes,0,2026-09-24
+42,Franklin Coach Group,2026-06-03,Vehicle Inspection,78.0,5,2026-07-03,Yes,0,2026-09-24
+43,Franklin Coach Group,2026-05-24,Contract Compliance,74.0,6,2026-06-08,Yes,0,2026-09-24
+44,Franklin Coach Group,2026-06-07,Driver File Review,97.0,0,2026-07-22,Yes,0,2026-09-24

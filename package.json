@@ -1,0 +1,11 @@
+{
+  "name": "jude-mirac-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173 --strictPort",
+    "check": "python3 scripts/check_site.py && node --check assets/transportation.js"
+  },
+  "devDependencies": { "vite": "8.3.0" }
+}

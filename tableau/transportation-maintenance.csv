@@ -1,0 +1,189 @@
+maintenance_id,contractor_name,service_date,service_type,downtime_hours,returned_to_service
+1,Liberty Transit Services,2026-06-21,Tire Service,29.8,2026-06-22 05:48:00
+2,Liberty Transit Services,2026-05-12,Preventive Maintenance,0.5,2026-05-12 00:30:00
+3,Liberty Transit Services,2026-10-07,Mechanical Failure,22.2,2026-10-07 22:12:00
+4,Liberty Transit Services,2026-09-01,Inspection,0.5,2026-09-01 00:30:00
+5,Liberty Transit Services,2026-06-02,Preventive Maintenance,35.0,2026-06-03 11:00:00
+6,Liberty Transit Services,2026-07-11,Preventive Maintenance,12.4,2026-07-11 12:24:00
+7,Liberty Transit Services,2026-07-28,Preventive Maintenance,9.9,2026-07-28 09:54:00
+8,Liberty Transit Services,2026-09-15,Inspection,30.4,2026-09-16 06:24:00
+9,Liberty Transit Services,2026-04-07,Mechanical Failure,0.5,2026-04-07 00:30:00
+10,Liberty Transit Services,2026-04-08,Preventive Maintenance,17.6,2026-04-08 17:36:00
+11,Liberty Transit Services,2026-05-22,Preventive Maintenance,12.5,2026-05-22 12:30:00
+12,Liberty Transit Services,2026-10-19,Inspection,0.5,2026-10-19 00:30:00
+13,Liberty Transit Services,2026-07-13,Brake Service,6.4,2026-07-13 06:24:00
+14,Liberty Transit Services,2026-07-03,Preventive Maintenance,8.0,2026-07-03 08:00:00
+15,Liberty Transit Services,2026-05-16,Preventive Maintenance,23.4,2026-05-16 23:24:00
+16,Liberty Transit Services,2026-09-14,Mechanical Failure,33.1,2026-09-15 09:06:00
+17,Liberty Transit Services,2026-06-01,Preventive Maintenance,0.5,2026-06-01 00:30:00
+18,Liberty Transit Services,2026-10-01,Preventive Maintenance,1.8,2026-10-01 01:48:00
+19,Liberty Transit Services,2026-03-24,Preventive Maintenance,12.9,2026-03-24 12:54:00
+20,Liberty Transit Services,2026-05-29,Tire Service,21.8,2026-05-29 21:48:00
+21,Liberty Transit Services,2026-04-08,Mechanical Failure,31.7,2026-04-09 07:42:00
+22,Liberty Transit Services,2026-04-25,Brake Service,9.9,2026-04-25 09:54:00
+23,Liberty Transit Services,2026-09-17,Mechanical Failure,15.7,2026-09-17 15:42:00
+24,Liberty Transit Services,2026-06-21,Brake Service,14.0,2026-06-21 14:00:00
+25,Liberty Transit Services,2026-05-21,Inspection,0.5,2026-05-21 00:30:00
+26,Liberty Transit Services,2026-07-29,Preventive Maintenance,21.9,2026-07-29 21:54:00
+27,Keystone Mobility,2026-07-21,Preventive Maintenance,29.3,2026-07-22 05:18:00
+28,Keystone Mobility,2026-08-03,Inspection,0.5,2026-08-03 00:30:00
+29,Keystone Mobility,2026-05-22,Preventive Maintenance,0.5,2026-05-22 00:30:00
+30,Keystone Mobility,2026-07-12,Preventive Maintenance,29.1,2026-07-13 05:06:00
+31,Keystone Mobility,2026-06-21,Brake Service,11.5,2026-06-21 11:30:00
+32,Keystone Mobility,2026-08-10,Tire Service,7.3,2026-08-10 07:18:00
+33,Keystone Mobility,2026-08-31,Preventive Maintenance,6.6,2026-08-31 06:36:00
+34,Keystone Mobility,2026-08-20,Preventive Maintenance,22.2,2026-08-20 22:12:00
+35,Keystone Mobility,2026-07-18,Inspection,9.1,2026-07-18 09:06:00
+36,Keystone Mobility,2026-10-06,Tire Service,0.5,2026-10-06 00:30:00
+37,Keystone Mobility,2026-10-30,Mechanical Failure,18.9,2026-10-30 18:54:00
+38,Keystone Mobility,2026-07-29,Preventive Maintenance,0.5,2026-07-29 00:30:00
+39,Keystone Mobility,2026-05-01,Mechanical Failure,40.7,2026-05-02 16:42:00
+40,Keystone Mobility,2026-07-28,Preventive Maintenance,0.5,2026-07-28 00:30:00
+41,Keystone Mobility,2026-04-21,Mechanical Failure,20.9,2026-04-21 20:54:00
+42,Keystone Mobility,2026-06-10,Preventive Maintenance,38.4,2026-06-11 14:24:00
+43,Keystone Mobility,2026-07-01,Tire Service,10.7,2026-07-01 10:42:00
+44,Keystone Mobility,2026-07-31,Brake Service,0.5,2026-07-31 00:30:00
+45,Keystone Mobility,2026-05-13,Preventive Maintenance,11.6,2026-05-13 11:36:00
+46,Keystone Mobility,2026-08-17,Preventive Maintenance,7.2,2026-08-17 07:12:00
+47,Keystone Mobility,2026-07-25,Mechanical Failure,32.5,2026-07-26 08:30:00
+48,Keystone Mobility,2026-07-17,Inspection,13.9,2026-07-17 13:54:00
+49,Keystone Mobility,2026-09-12,Inspection,7.4,2026-09-12 07:24:00
+50,Keystone Mobility,2026-09-30,Preventive Maintenance,5.2,2026-09-30 05:12:00
+51,Keystone Mobility,2026-03-15,Preventive Maintenance,0.5,2026-03-15 00:30:00
+52,Keystone Mobility,2026-05-10,Mechanical Failure,11.3,2026-05-10 11:18:00
+53,Keystone Mobility,2026-10-16,Tire Service,36.3,2026-10-17 12:18:00
+54,Keystone Mobility,2026-09-26,Mechanical Failure,17.6,2026-09-26 17:36:00
+55,Keystone Mobility,2026-06-15,Inspection,3.0,2026-06-15 03:00:00
+56,Delaware Valley Transport,2026-06-22,Tire Service,2.5,2026-06-22 02:30:00
+57,Delaware Valley Transport,2026-09-12,Mechanical Failure,19.7,2026-09-12 19:42:00
+58,Delaware Valley Transport,2026-06-27,Preventive Maintenance,10.8,2026-06-27 10:48:00
+59,Delaware Valley Transport,2026-04-07,Preventive Maintenance,4.1,2026-04-07 04:06:00
+60,Delaware Valley Transport,2026-06-09,Preventive Maintenance,14.4,2026-06-09 14:24:00
+61,Delaware Valley Transport,2026-10-15,Brake Service,9.1,2026-10-15 09:06:00
+62,Delaware Valley Transport,2026-06-16,Tire Service,22.2,2026-06-16 22:12:00
+63,Delaware Valley Transport,2026-08-15,Mechanical Failure,18.4,2026-08-15 18:24:00
+64,Delaware Valley Transport,2026-06-07,Preventive Maintenance,6.3,2026-06-07 06:18:00
+65,Delaware Valley Transport,2026-05-18,Tire Service,11.9,2026-05-18 11:54:00
+66,Delaware Valley Transport,2026-08-31,Preventive Maintenance,0.5,2026-08-31 00:30:00
+67,Delaware Valley Transport,2026-06-05,Tire Service,5.2,2026-06-05 05:12:00
+68,Delaware Valley Transport,2026-10-11,Preventive Maintenance,18.5,2026-10-11 18:30:00
+69,Delaware Valley Transport,2026-07-23,Preventive Maintenance,13.0,2026-07-23 13:00:00
+70,Delaware Valley Transport,2026-05-28,Inspection,33.9,2026-05-29 09:54:00
+71,Delaware Valley Transport,2026-06-10,Mechanical Failure,96.4,2026-06-14 00:24:00
+72,Delaware Valley Transport,2026-10-17,Brake Service,0.5,2026-10-17 00:30:00
+73,Delaware Valley Transport,2026-08-17,Inspection,5.0,2026-08-17 05:00:00
+74,Delaware Valley Transport,2026-08-12,Preventive Maintenance,24.7,2026-08-13 00:42:00
+75,Delaware Valley Transport,2026-07-18,Mechanical Failure,0.5,2026-07-18 00:30:00
+76,Delaware Valley Transport,2026-03-29,Mechanical Failure,55.8,2026-03-31 07:48:00
+77,Delaware Valley Transport,2026-04-23,Mechanical Failure,19.3,2026-04-23 19:18:00
+78,Delaware Valley Transport,2026-06-15,Mechanical Failure,27.0,2026-06-16 03:00:00
+79,MetroLink Operations,2026-06-27,Mechanical Failure,35.0,2026-06-28 11:00:00
+80,MetroLink Operations,2026-06-29,Preventive Maintenance,0.5,2026-06-29 00:30:00
+81,MetroLink Operations,2026-08-18,Inspection,0.5,2026-08-18 00:30:00
+82,MetroLink Operations,2026-07-29,Preventive Maintenance,0.5,2026-07-29 00:30:00
+83,MetroLink Operations,2026-07-04,Mechanical Failure,53.7,2026-07-06 05:42:00
+84,MetroLink Operations,2026-03-23,Mechanical Failure,0.5,2026-03-23 00:30:00
+85,MetroLink Operations,2026-03-29,Preventive Maintenance,0.5,2026-03-29 00:30:00
+86,MetroLink Operations,2026-10-18,Brake Service,24.3,2026-10-19 00:18:00
+87,MetroLink Operations,2026-08-14,Preventive Maintenance,32.3,2026-08-15 08:18:00
+88,MetroLink Operations,2026-09-25,Tire Service,9.4,2026-09-25 09:24:00
+89,MetroLink Operations,2026-09-05,Inspection,21.2,2026-09-05 21:12:00
+90,MetroLink Operations,2026-05-26,Tire Service,0.5,2026-05-26 00:30:00
+91,MetroLink Operations,2026-07-25,Preventive Maintenance,3.1,2026-07-25 03:06:00
+92,MetroLink Operations,2026-05-31,Mechanical Failure,30.0,2026-06-01 06:00:00
+93,MetroLink Operations,2026-09-02,Preventive Maintenance,0.5,2026-09-02 00:30:00
+94,MetroLink Operations,2026-07-08,Brake Service,24.5,2026-07-09 00:30:00
+95,MetroLink Operations,2026-09-20,Mechanical Failure,23.0,2026-09-20 23:00:00
+96,MetroLink Operations,2026-07-16,Mechanical Failure,21.3,2026-07-16 21:18:00
+97,MetroLink Operations,2026-06-17,Preventive Maintenance,12.6,2026-06-17 12:36:00
+98,MetroLink Operations,2026-05-11,Brake Service,0.5,2026-05-11 00:30:00
+99,MetroLink Operations,2026-06-19,Preventive Maintenance,18.7,2026-06-19 18:42:00
+100,MetroLink Operations,2026-09-25,Mechanical Failure,17.2,2026-09-25 17:12:00
+101,MetroLink Operations,2026-06-30,Mechanical Failure,14.1,2026-06-30 14:06:00
+102,MetroLink Operations,2026-04-15,Tire Service,20.5,2026-04-15 20:30:00
+103,MetroLink Operations,2026-06-02,Brake Service,0.5,2026-06-02 00:30:00
+104,MetroLink Operations,2026-09-20,Preventive Maintenance,4.0,2026-09-20 04:00:00
+105,MetroLink Operations,2026-06-16,Preventive Maintenance,0.5,2026-06-16 00:30:00
+106,MetroLink Operations,2026-05-12,Preventive Maintenance,0.5,2026-05-12 00:30:00
+107,MetroLink Operations,2026-06-05,Preventive Maintenance,36.4,2026-06-06 12:24:00
+108,MetroLink Operations,2026-05-06,Inspection,0.5,2026-05-06 00:30:00
+109,MetroLink Operations,2026-10-04,Preventive Maintenance,6.9,2026-10-04 06:54:00
+110,MetroLink Operations,2026-07-07,Mechanical Failure,24.5,2026-07-08 00:30:00
+111,MetroLink Operations,2026-08-30,Preventive Maintenance,16.4,2026-08-30 16:24:00
+112,MetroLink Operations,2026-05-09,Preventive Maintenance,5.0,2026-05-09 05:00:00
+113,CityRide Partners,2026-06-03,Tire Service,16.6,2026-06-03 16:36:00
+114,CityRide Partners,2026-10-08,Inspection,28.1,2026-10-09 04:06:00
+115,CityRide Partners,2026-09-26,Inspection,34.0,2026-09-27 10:00:00
+116,CityRide Partners,2026-08-31,Preventive Maintenance,20.4,2026-08-31 20:24:00
+117,CityRide Partners,2026-10-19,Inspection,10.6,2026-10-19 10:36:00
+118,CityRide Partners,2026-08-16,Mechanical Failure,25.0,2026-08-17 01:00:00
+119,CityRide Partners,2026-06-10,Preventive Maintenance,20.5,2026-06-10 20:30:00
+120,CityRide Partners,2026-10-15,Mechanical Failure,32.3,2026-10-16 08:18:00
+121,CityRide Partners,2026-08-17,Tire Service,25.3,2026-08-18 01:18:00
+122,CityRide Partners,2026-05-15,Preventive Maintenance,0.5,2026-05-15 00:30:00
+123,CityRide Partners,2026-06-21,Preventive Maintenance,22.2,2026-06-21 22:12:00
+124,CityRide Partners,2026-09-23,Mechanical Failure,63.0,2026-09-25 15:00:00
+125,CityRide Partners,2026-04-25,Preventive Maintenance,17.0,2026-04-25 17:00:00
+126,CityRide Partners,2026-07-04,Inspection,0.5,2026-07-04 00:30:00
+127,CityRide Partners,2026-07-10,Mechanical Failure,25.5,2026-07-11 01:30:00
+128,CityRide Partners,2026-09-01,Preventive Maintenance,0.5,2026-09-01 00:30:00
+129,CityRide Partners,2026-04-29,Mechanical Failure,13.9,2026-04-29 13:54:00
+130,CityRide Partners,2026-03-30,Inspection,12.5,2026-03-30 12:30:00
+131,CityRide Partners,2026-06-26,Preventive Maintenance,17.4,2026-06-26 17:24:00
+132,CityRide Partners,2026-05-10,Brake Service,4.8,2026-05-10 04:48:00
+133,CityRide Partners,2026-07-09,Inspection,0.5,2026-07-09 00:30:00
+134,CityRide Partners,2026-06-17,Preventive Maintenance,11.7,2026-06-17 11:42:00
+135,CityRide Partners,2026-09-03,Mechanical Failure,23.8,2026-09-03 23:48:00
+136,CityRide Partners,2026-09-23,Tire Service,28.2,2026-09-24 04:12:00
+137,CityRide Partners,2026-04-01,Preventive Maintenance,0.5,2026-04-01 00:30:00
+138,CityRide Partners,2026-08-13,Mechanical Failure,56.8,2026-08-15 08:48:00
+139,CityRide Partners,2026-07-11,Preventive Maintenance,10.8,2026-07-11 10:48:00
+140,CityRide Partners,2026-07-26,Brake Service,19.4,2026-07-26 19:24:00
+141,CityRide Partners,2026-05-13,Mechanical Failure,17.6,2026-05-13 17:36:00
+142,Regional Access Transit,2026-03-20,Mechanical Failure,6.0,2026-03-20 06:00:00
+143,Regional Access Transit,2026-05-17,Tire Service,19.6,2026-05-17 19:36:00
+144,Regional Access Transit,2026-08-19,Mechanical Failure,5.5,2026-08-19 05:30:00
+145,Regional Access Transit,2026-04-24,Mechanical Failure,12.1,2026-04-24 12:06:00
+146,Regional Access Transit,2026-05-08,Preventive Maintenance,32.0,2026-05-09 08:00:00
+147,Regional Access Transit,2026-04-30,Preventive Maintenance,1.6,2026-04-30 01:36:00
+148,Regional Access Transit,2026-08-02,Tire Service,0.5,2026-08-02 00:30:00
+149,Regional Access Transit,2026-07-16,Brake Service,4.3,2026-07-16 04:18:00
+150,Regional Access Transit,2026-04-14,Preventive Maintenance,11.3,2026-04-14 11:18:00
+151,Regional Access Transit,2026-06-30,Preventive Maintenance,0.5,2026-06-30 00:30:00
+152,Regional Access Transit,2026-06-13,Inspection,0.5,2026-06-13 00:30:00
+153,Regional Access Transit,2026-06-23,Inspection,30.9,2026-06-24 06:54:00
+154,Regional Access Transit,2026-07-01,Tire Service,0.5,2026-07-01 00:30:00
+155,Regional Access Transit,2026-08-01,Preventive Maintenance,0.5,2026-08-01 00:30:00
+156,Regional Access Transit,2026-06-14,Preventive Maintenance,8.2,2026-06-14 08:12:00
+157,Regional Access Transit,2026-06-19,Preventive Maintenance,3.9,2026-06-19 03:54:00
+158,Regional Access Transit,2026-07-24,Mechanical Failure,86.0,2026-07-27 14:00:00
+159,Regional Access Transit,2026-04-14,Mechanical Failure,48.3,2026-04-16 00:18:00
+160,Regional Access Transit,2026-06-21,Inspection,15.2,2026-06-21 15:12:00
+161,Regional Access Transit,2026-09-09,Preventive Maintenance,22.1,2026-09-09 22:06:00
+162,Regional Access Transit,2026-04-14,Preventive Maintenance,0.5,2026-04-14 00:30:00
+163,Regional Access Transit,2026-08-11,Brake Service,23.5,2026-08-11 23:30:00
+164,Regional Access Transit,2026-05-14,Mechanical Failure,113.0,2026-05-18 17:00:00
+165,Regional Access Transit,2026-05-06,Brake Service,0.5,2026-05-06 00:30:00
+166,Regional Access Transit,2026-03-17,Mechanical Failure,6.4,2026-03-17 06:24:00
+167,Independence Transportation,2026-09-02,Inspection,0.5,2026-09-02 00:30:00
+168,Independence Transportation,2026-06-02,Preventive Maintenance,0.5,2026-06-02 00:30:00
+170,Independence Transportation,2026-05-20,Inspection,8.2,2026-05-20 08:12:00
+172,Independence Transportation,2026-07-19,Brake Service,5.9,2026-07-19 05:54:00
+173,Independence Transportation,2026-05-07,Inspection,9.9,2026-05-07 09:54:00
+174,Independence Transportation,2026-06-18,Preventive Maintenance,13.6,2026-06-18 13:36:00
+175,Independence Transportation,2026-07-07,Brake Service,0.5,2026-07-07 00:30:00
+177,Independence Transportation,2026-07-25,Tire Service,0.5,2026-07-25 00:30:00
+178,Independence Transportation,2026-06-06,Preventive Maintenance,22.3,2026-06-06 22:18:00
+180,Independence Transportation,2026-05-26,Inspection,17.9,2026-05-26 17:54:00
+182,Independence Transportation,2026-06-23,Preventive Maintenance,0.5,2026-06-23 00:30:00
+184,Independence Transportation,2026-06-08,Inspection,0.5,2026-06-08 00:30:00
+185,Independence Transportation,2026-08-21,Inspection,19.8,2026-08-21 19:48:00
+186,Independence Transportation,2026-07-29,Tire Service,27.0,2026-07-30 03:00:00
+188,Independence Transportation,2026-07-30,Preventive Maintenance,3.8,2026-07-30 03:48:00
+191,Independence Transportation,2026-09-09,Brake Service,37.9,2026-09-10 13:54:00
+192,Independence Transportation,2026-07-17,Preventive Maintenance,9.2,2026-07-17 09:12:00
+194,Independence Transportation,2026-07-10,Inspection,0.5,2026-07-10 00:30:00
+195,Independence Transportation,2026-07-20,Brake Service,0.5,2026-07-20 00:30:00
+196,Independence Transportation,2026-06-03,Preventive Maintenance,0.5,2026-06-03 00:30:00
+197,Independence Transportation,2026-05-23,Preventive Maintenance,4.6,2026-05-23 04:36:00
+198,Independence Transportation,2026-07-03,Inspection,0.5,2026-07-03 00:30:00
