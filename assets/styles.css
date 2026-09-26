@@ -9,3 +9,7 @@
 @media(max-width:390px){.site-header nav{gap:15px}.wordmark{gap:8px}.monogram{width:32px;height:32px}.featured-copy,.project-card{padding:22px}.headline-metric>strong{font-size:3.4rem}.headline-metric>div{font-size:.82rem}.kpi{padding:17px}.kpi strong{font-size:2rem}.large-stat{font-size:2.8rem}.chart-legend{gap:12px}.project-result{gap:12px}.project-result strong{font-size:2.3rem}.contact-section{padding:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.site-header nav,.actions,.contact-section{display:none}.hero{padding-block:30px}.wrap{width:100%}body{font-size:12pt}.project-card,.featured-project{break-inside:avoid}a{text-decoration:underline}.hero-evidence{box-shadow:none}.project-grid,.about-section{gap:20px}}
+
+/* Preserve the full desktop Tableau canvas on narrow screens. */
+.embed-shell{min-height:827px;overflow-x:auto}.embed-shell iframe{min-width:1000px;height:850px}
+@media(max-width:760px){.embed-shell{min-height:827px}.embed-shell iframe{height:850px}}

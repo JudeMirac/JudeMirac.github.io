@@ -1,114 +1,78 @@
-# Transportation Performance & Risk — Tableau calculations
+# Transportation Performance — published Tableau workbook
 
-Source: supplied SEPTA Access practice CSVs. Not official SEPTA service data.
+Source: supplied SEPTA-inspired practice CSVs. Not official SEPTA service data.
 
-Use `transportation-trips.csv` as a **single trip-grain data source**. Do not physically join maintenance or compliance to it. Those sources have multiple rows per vehicle/contractor and would multiply trip records.
+Published September 26, 2026:
+https://public.tableau.com/app/profile/jude.mirac/viz/TransportationPerformanceJudeMirac/TransportationPerformance
 
-Set `trip_date` to Date and `scheduled_pickup` / `actual_pickup` to Date & Time. The source timestamps have minute precision. Set `contractor_id` and `trip_id` to Dimensions; trip IDs are unique. `passenger_count` is a measure. Empty numeric flags must remain NULL.
+## Source and grain
 
-## Calculated fields
+`transportation-trips.csv` is the single trip-grain source. Maintenance and compliance are not physically joined, preventing duplicate trip counts. Tableau displays the imported column names in title case. Trip Date is a date; Scheduled Pickup and Actual Pickup are date/time. Trip Id and Contractor Id are dimensions. Exported numeric validation flags retain NULL for excluded pickups.
 
-Create each field under the name shown. Row flags in the export are independently computed validation values; these native Tableau formulas are the authoritative dashboard calculations.
+## Native Tableau calculations
 
-### Valid Pickup
+The five calculated fields below are used in the published workbook. The CSV also contains independently computed row-level flags, used for validation and numerator/denominator tooltips.
+
+### On-Time Performance
+
 ```tableau
-[trip_status] = 'Completed'
-AND NOT ISNULL([scheduled_pickup])
-AND NOT ISNULL([actual_pickup])
-```
-
-### Pickup Delay Minutes
-```tableau
-IF [Valid Pickup] THEN
-    DATEDIFF('minute', [scheduled_pickup], [actual_pickup])
-END
-```
-
-### On Time Flag
-```tableau
-IF [Valid Pickup] THEN
-    IF [Pickup Delay Minutes] >= -5 AND [Pickup Delay Minutes] <= 15
+AVG(IF [Trip Status] = 'Completed'
+    AND NOT ISNULL([Scheduled Pickup]) AND NOT ISNULL([Actual Pickup])
+THEN IF DATEDIFF('minute', [Scheduled Pickup], [Actual Pickup]) >= -5
+    AND DATEDIFF('minute', [Scheduled Pickup], [Actual Pickup]) <= 15
     THEN 1 ELSE 0 END
-END
+END)
 ```
-
-### Late Flag
-```tableau
-IF [Valid Pickup] THEN
-    IF [Pickup Delay Minutes] >= 16 THEN 1 ELSE 0 END
-END
-```
-
-### On Time Performance
-```tableau
-AVG([On Time Flag])
-```
-Format as percentage with one decimal. Do not multiply by 100 and also apply percentage formatting. Do not average contractor percentages.
 
 ### Late Pickups
+
 ```tableau
-SUM([Late Flag])
+SUM(IF [Trip Status] = 'Completed'
+    AND NOT ISNULL([Scheduled Pickup]) AND NOT ISNULL([Actual Pickup])
+THEN IF DATEDIFF('minute', [Scheduled Pickup], [Actual Pickup]) >= 16
+    THEN 1 ELSE 0 END
+END)
 ```
 
 ### Cancellation Rate
+
 ```tableau
-SUM(IF [trip_status] = 'Cancelled' THEN 1 ELSE 0 END) / COUNT([trip_id])
+SUM(IF [Trip Status] = 'Cancelled' THEN 1 ELSE 0 END) / COUNT([Trip Id])
 ```
-Format as percentage with one decimal.
 
 ### Average Pickup Delay
-```tableau
-AVG([Pickup Delay Minutes])
-```
-Format as a number with one decimal and `min` suffix. This is signed delay: early arrivals remain negative. It is not the average of only positive delays.
 
-### Valid Completed Trips
 ```tableau
-SUM(IF [Valid Pickup] THEN 1 ELSE 0 END)
+AVG(IF [Trip Status] = 'Completed'
+    AND NOT ISNULL([Scheduled Pickup]) AND NOT ISNULL([Actual Pickup])
+THEN DATEDIFF('minute', [Scheduled Pickup], [Actual Pickup])
+END)
 ```
 
-### Completed Trips
-```tableau
-SUM(IF [trip_status] = 'Completed' THEN 1 ELSE 0 END)
-```
-
-### Completed Passenger Volume
-```tableau
-SUM(IF [trip_status] = 'Completed' THEN [passenger_count] END)
-```
+Delay is signed, in minutes; early pickups remain negative. The dashboard displays 7.97 minutes for the full source, equivalent to 8.0 minutes at one decimal on the website.
 
 ### Contractor Review Flag
+
 ```tableau
-IF ISNULL(AVG([On Time Flag])) THEN 'No valid trips'
-ELSEIF AVG([On Time Flag]) < 0.85 THEN 'Review Needed'
+IF ISNULL([On-Time Performance]) THEN 'No valid trips'
+ELSEIF [On-Time Performance] < 0.85 THEN 'Review Needed'
 ELSE 'Acceptable'
 END
 ```
-Evaluate at contractor grain. Compare the unrounded ratio to 0.85. Compliance is intentionally excluded from this flag. Franklin Coach Group has no trip records, so it does not appear in a trip-only view; show the eight-contractor coverage note separately. Do not give it 0% OTP.
 
-### Completed Missing Pickup
-```tableau
-SUM(IF [trip_status] = 'Completed' AND
-    (ISNULL([scheduled_pickup]) OR ISNULL([actual_pickup]))
-    THEN 1 ELSE 0 END)
-```
+Compare the unrounded ratio with 0.85 at contractor grain. This flag does not incorporate compliance. Franklin Coach Group has no trips and is documented as unscored, not 0%.
 
-### Pickup Classification
-```tableau
-IF NOT [Valid Pickup] THEN 'Excluded'
-ELSEIF [Pickup Delay Minutes] < -5 THEN 'Too early'
-ELSEIF [Pickup Delay Minutes] <= 15 THEN 'On time'
-ELSE 'Late'
-END
-```
+## Published dashboard
 
-## Dashboard views
+**Transportation Performance**, desktop canvas 1,000 × 800:
 
-1. **Service Performance:** four headline KPIs (OTP, late pickups, cancellation rate, average signed delay), daily OTP line with an 85% reference line, contractor OTP bars sorted ascending, and contractor scorecard including numerator / denominator. Filters: contractor and trip date, applied to every trip-based sheet. Keep all statuses in the source; do not globally filter to Completed, because that breaks cancellation rate.
-2. **Fleet & Compliance:** separate maintenance and compliance sources. Show 188 maintenance events, 42 mechanical failures, 2,845.8 total downtime hours, 44 audits, and 12 overdue open actions as of September 24, 2026. Fleet status snapshot: 3 of 56 vehicles out of service. Apply dates to their respective service/audit fields, not `trip_date`. Do not imply missing return dates are closed work.
-3. **Data Quality:** missing actual pickup, actual dropoff, driver, and vehicle fields; completed trips with missing pickup timestamps; status distribution. Show that missing-field counts overlap and include expected blanks for non-completed trips.
+- **Service KPIs:** average signed pickup delay, cancellation rate, late pickups, and on-time performance.
+- **Contractor Performance:** ascending OTP bars, 85% reference line, review flag, and valid/on-time trip counts in tooltips.
+- **Daily On-Time Trend:** continuous daily OTP line with an 85% reference line and trip counts in tooltips.
+- Shared contractor and trip-date filters apply to all worksheets using this source. All statuses remain available so cancellation rate keeps the correct denominator.
+- Source disclosure, KPI definitions, and no-trip contractor coverage note are visible on the dashboard.
 
-Use 1,200 × 900 for the desktop dashboard and add a phone layout. Navy `#101e32`, teal `#007d78`, amber `#e5b559`, light blue `#91acd2`. Use a source/provenance subtitle and show denominators in tooltips. Add navigation among the three views.
+The website separately presents fleet, compliance, and data-quality findings. These are not additional published Tableau dashboards.
 
 ## Reconciliation — unfiltered trip source
 
@@ -134,12 +98,6 @@ Use 1,200 × 900 for the desktop dashboard and add a phone layout. Navy `#101e32
 
 Boundary checks: −6 minutes = too early; −5 and +15 = on time; +16 = late. Missing timestamps and non-completed trips are NULL for pickup KPIs. An empty filtered period has no valid OTP, not 0%.
 
-## Supporting sources
-
-- Tableau date calculations: https://help.tableau.com/current/pro/desktop/en-us/functions_functions_date.htm
-- Tableau dashboard authoring: https://help.tableau.com/current/pro/desktop/en-us/dashboards_create.htm
-- Tableau Public FAQ: https://help.tableau.com/current/pro/desktop/en-us/public_faq.htm
-
 ## Embed configuration
 
-After publishing and checking the Tableau Public view, copy its verified `https://public.tableau.com/views/.../...` URL into `assets/tableau-config.js` as `window.PORTFOLIO_TABLEAU.url`. The case study adds an iframe and an external fallback link automatically. Until a real URL is supplied, the page shows the verified project snapshot and omits the embed section.
+`assets/tableau-config.js` contains the verified Tableau share URL. The case-study script embeds that view and supplies a direct Tableau Public fallback link. The website remains readable without JavaScript through its static validated snapshot.

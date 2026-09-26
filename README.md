@@ -11,15 +11,19 @@ Portfolio focused on **Health and Safety Data Analytics**. Built as a static, ac
 
 The supplied résumé informs the biography and project results. Public project source links use the existing `JudeMirac` repositories. The AI source repository remains private; the site includes a résumé-based summary without exposing its contents.
 
-## Publish on GitHub Pages
+## Live portfolio and dashboard
 
-Use the public user-site repository **JudeMirac/JudeMirac.github.io**. Keep these files at its root. In Settings → Pages, select **Deploy from a branch**, branch **main**, folder **/ (root)**. `.nojekyll` serves the HTML/CSS/JS directly. The expected user-site address is `https://judemirac.github.io/`; this is a configuration target, not proof of a completed deployment.
+Portfolio: https://judemirac.github.io/
 
-## Tableau status
+Transportation case study: https://judemirac.github.io/projects/transportation.html
 
-`assets/tableau-config.js` intentionally has an empty URL until a real dashboard is published and verified. A static project snapshot is already visible. No sample URL or unrelated dashboard is embedded.
+Tableau Public: https://public.tableau.com/app/profile/jude.mirac/viz/TransportationPerformanceJudeMirac/TransportationPerformance
 
-`tableau/` contains separate trip, maintenance, and compliance exports, native Tableau calculation definitions, a dashboard layout, reconciliation totals, and the reconstructed Access KPI SQL. These preparation files are not a published Tableau workbook.
+GitHub Pages deploys from **main / (root)** in **JudeMirac/JudeMirac.github.io**. `.nojekyll` serves the HTML/CSS/JS directly.
+
+The published Tableau dashboard is embedded in the transportation case study through `assets/tableau-config.js`. It includes four KPI values, contractor OTP bars, a daily OTP trend, 85% reference lines, and shared contractor/date filters. The static snapshot remains available alongside the interactive dashboard.
+
+`tableau/` contains trip, maintenance, and compliance exports, calculation documentation, reconciliation totals, and reconstructed Access KPI SQL. The published dashboard uses only the trip-grain source; fleet, audit, and data-quality findings appear in the website case study.
 
 ## Refresh data
 
@@ -34,7 +38,7 @@ The portfolio HTML contains the verified September 24 snapshot so it works witho
 ## Files
 
 - `index.html` — portfolio
-- `projects/transportation.html` — transportation case study and eventual Tableau embed
+- `projects/transportation.html` — transportation case study and published Tableau embed
 - `assets/styles.css` — responsive design, focus styling, reduced motion, print styles
 - `assets/Jude-Mirac-Resume.pdf` — supplied résumé, unchanged
 - `data/transportation-summary.json` — computed results
@@ -59,6 +63,3 @@ node --check assets/transportation.js
 node --check assets/tableau-config.js
 ```
 
-## Tableau publishing
-
-The Tableau Public workbook and embed are pending. The portfolio currently presents the validated transportation snapshot.
