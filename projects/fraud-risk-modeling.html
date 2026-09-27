@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fraud Risk Modeling | Jude Mirac</title>
+  <meta name="description" content="An end-to-end fraud analytics case study that moves from descriptive analysis and predictive modeling to an actionable allow, review, and block policy.">
+  <meta name="theme-color" content="#101e32">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23101e32'/%3E%3Cpath d='M9 29V21h5v8zm9 0V14h5v15zm9 0V8h5v21z' fill='%2345d7ca'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="../" aria-label="Jude Mirac home"><span class="monogram">JM</span><span>Jude Mirac <span class="wordmark-role">/ Data Analyst</span></span></a>
+  <nav aria-label="Main navigation"><a href="../#work">Projects</a><a href="../#about">About</a><a href="../assets/Jude-Mirac-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></nav>
+</header>
+
+<main id="main">
+<section class="case-intro wrap">
+  <a class="back-link" href="../#work">← Back to projects</a>
+  <p class="eyebrow">Decision modeling</p>
+  <h1>Fraud Risk<br>Modeling</h1>
+  <p class="lede">How do you turn a fraud score into an operating decision? This project moves beyond model accuracy and converts ranked transaction risk into a practical ALLOW, REVIEW, and BLOCK policy designed around fraud capture and review capacity.</p>
+  <div class="case-meta"><span>Python</span><span>pandas / NumPy</span><span>scikit-learn</span><span>Prescriptive analytics</span></div>
+</section>
+
+<section class="snapshot wrap">
+  <div class="snapshot-top"><div><h2>Decision-policy snapshot</h2><p>End-to-end fraud analytics workflow</p></div><p class="small-note">Project evaluation results, not production outcomes.</p></div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Fraud captured</span><strong>61%</strong><span class="kpi-note">intercepted through review or blocking</span></div>
+    <div class="kpi"><span class="kpi-label">ALLOW tier</span><strong>80%</strong><span class="kpi-note">lowest-ranked transaction risk</span></div>
+    <div class="kpi"><span class="kpi-label">REVIEW tier</span><strong>15%</strong><span class="kpi-note">middle-high ranked risk</span></div>
+    <div class="kpi"><span class="kpi-label">BLOCK tier</span><strong>5%</strong><span class="kpi-note">highest-ranked transaction risk</span></div>
+  </div>
+
+  <div class="snapshot-panels">
+    <div class="chart-panel">
+      <h3>Decision allocation</h3>
+      <p>Percentile ranks translate model output into fixed operating capacity.</p>
+      <div class="tier-bar" role="img" aria-label="Decision tiers: 80 percent allow, 15 percent review, 5 percent block"><span>ALLOW 80%</span><span title="REVIEW 15%"></span><span title="BLOCK 5%"></span></div>
+      <div class="stack-legend">
+        <div><i class="on-time"></i><span>ALLOW</span><strong>80%</strong></div>
+        <div><i class="late"></i><span>REVIEW</span><strong>15%</strong></div>
+        <div><i style="background:#ce6b57"></i><span>BLOCK</span><strong>5%</strong></div>
+      </div>
+    </div>
+    <div class="chart-panel">
+      <h3>Why percentile ranking?</h3>
+      <p>The selected Random Forest ranked transactions effectively, but its predicted probabilities were tightly clustered.</p>
+      <div class="callout">Using relative percentile rank instead of fixed probability cutoffs keeps the review queue controlled while still prioritizing the highest-risk transactions.</div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <p class="eyebrow">Analytics workflow</p>
+  <h2>From describing fraud to deciding what to do</h2>
+  <div class="findings-grid">
+    <div><span class="finding-number">01 / Descriptive</span><h3>Find the patterns</h3><p>Measure the overall fraud rate and compare fraud behavior across merchant, category, payment method, device type, transaction velocity, and prior chargeback history.</p></div>
+    <div><span class="finding-number">02 / Diagnostic</span><h3>Explain the signals</h3><p>Explore feature relationships and engineer interaction features so combined behaviors can be represented rather than treating every signal independently.</p></div>
+    <div><span class="finding-number">03 / Predictive</span><h3>Rank the risk</h3><p>Compare Logistic Regression and Random Forest, use class weighting to address imbalance, and evaluate model ranking performance with ROC-AUC and threshold analysis.</p></div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <p class="eyebrow">Prescriptive layer</p>
+  <h2>Model output becomes an operating policy</h2>
+  <div class="method-columns">
+    <div>
+      <h3>Balance fraud capture with review capacity</h3>
+      <p>The policy reserves manual review for 15% of transactions and blocking for the riskiest 5%, allowing the remaining 80% to move through automatically.</p>
+      <p>This makes the decision rule usable by an operations team because queue size is explicit rather than left to an arbitrary probability threshold.</p>
+    </div>
+    <div>
+      <h3>Validate the ranking</h3>
+      <p>Fraud rates rise from low to high risk tiers, supporting the usefulness of the ranking-based policy. In the project evaluation, review and block tiers captured 61% of fraudulent transactions.</p>
+      <p>The result demonstrates a decision framework; it is not a claim about production fraud performance.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <h2>Methods &amp; tools</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th scope="col">Stage</th><th scope="col">Method</th><th scope="col">Purpose</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Exploration</th><td>pandas / NumPy</td><td>Profile fraud rates, transaction behavior, merchants, devices, and payment patterns.</td></tr>
+        <tr><th scope="row">Feature engineering</th><td>Interaction features</td><td>Represent combined risk signals and transaction behavior.</td></tr>
+        <tr><th scope="row">Modeling</th><td>Logistic Regression + Random Forest</td><td>Compare approaches and rank transaction risk.</td></tr>
+        <tr><th scope="row">Imbalance</th><td>Class weighting</td><td>Reduce bias toward the majority non-fraud class.</td></tr>
+        <tr><th scope="row">Decision policy</th><td>Percentile tiers</td><td>Convert ranked scores into ALLOW, REVIEW, and BLOCK actions.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="resource-links">
+    <a href="https://github.com/JudeMirac/Fraud-Model-Project" target="_blank" rel="noopener">View GitHub repository ↗</a>
+    <a href="https://github.com/JudeMirac/Fraud-Model-Project/blob/main/README.md" target="_blank" rel="noopener">Read project documentation ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap case-footer"><a href="../">Jude Mirac | Data Analyst</a><a href="mailto:judemirac20@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>
