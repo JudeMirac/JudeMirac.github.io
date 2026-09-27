@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Safety Risk Analysis | Jude Mirac</title>
+  <meta name="description" content="A workplace safety analytics case study using SQL, Python, pandas, and SQLite to identify concentrated risk, root causes, and exposure-normalized patterns.">
+  <meta name="theme-color" content="#101e32">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23101e32'/%3E%3Cpath d='M9 29V21h5v8zm9 0V14h5v15zm9 0V8h5v21z' fill='%2345d7ca'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="wordmark" href="../" aria-label="Jude Mirac home"><span class="monogram">JM</span><span>Jude Mirac <span class="wordmark-role">/ Data Analyst</span></span></a>
+  <nav aria-label="Main navigation"><a href="../#work">Projects</a><a href="../#about">About</a><a href="../assets/Jude-Mirac-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></nav>
+</header>
+
+<main id="main">
+<section class="case-intro wrap">
+  <a class="back-link" href="../#work">← Back to projects</a>
+  <p class="eyebrow">Safety analytics</p>
+  <h1>Safety Risk<br>Analysis</h1>
+  <p class="lede">Where is workplace risk concentrated, and what explains it? This project builds a reproducible SQL and Python pipeline that combines incident, exposure, process-path, severity, root-cause, and contributing-factor data into decision-ready risk metrics.</p>
+  <div class="case-meta"><span>SQL / SQLite</span><span>Python / pandas</span><span>Exposure-normalized analysis</span><span>Synthetic demonstration data</span></div>
+</section>
+
+<section class="snapshot wrap">
+  <div class="snapshot-top">
+    <div><h2>Risk concentration snapshot</h2><p>Portfolio analysis · Synthetic workplace safety dataset</p></div>
+    <p class="small-note">The public dataset is synthetic. The analytical structure mirrors a real operational safety reporting workflow without exposing company data.</p>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi"><span class="kpi-label">Top process paths</span><strong>75.5%</strong><span class="kpi-note">of incidents concentrated in the top 10 paths</span></div>
+    <div class="kpi"><span class="kpi-label">Top root causes</span><strong>76.9%</strong><span class="kpi-note">of incidents concentrated in the top 5 causes</span></div>
+    <div class="kpi"><span class="kpi-label">Primary method</span><strong>Rate</strong><span class="kpi-note">incident counts normalized by exposure hours</span></div>
+    <div class="kpi"><span class="kpi-label">Pipeline</span><strong>SQL</strong><span class="kpi-note">staging, integration, context, and feature layers</span></div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <p class="eyebrow">Business question</p>
+  <h2>Move from counts to risk</h2>
+  <div class="method-columns">
+    <div>
+      <h3>Why raw incident counts are not enough</h3>
+      <p>A process path can report more incidents simply because more hours are worked there. The project pairs incident counts with exposure data so comparisons reflect risk relative to operational activity, not volume alone.</p>
+      <p>The analysis also separates severity, root causes, and contributing factors so a high-frequency area can be reviewed differently from a lower-frequency but more severe area.</p>
+    </div>
+    <div>
+      <h3>What the pipeline produces</h3>
+      <p>Raw CSV files are loaded into SQLite, standardized in staging views, integrated across site and time dimensions, summarized into contextual distributions, and transformed into reusable risk features for analysis.</p>
+      <p>Python notebooks sit on top of those layers for exploration, data-health checks, process-path analysis, and interpretation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <p class="eyebrow">What the analysis shows</p>
+  <h2>Three ways to prioritize review</h2>
+  <div class="findings-grid">
+    <div><span class="finding-number">01 / Concentration</span><h3>Start where risk clusters</h3><p>The top 10 process paths account for 75.5% of incidents in the project analysis. That concentration creates a practical starting point for deeper review rather than spreading attention evenly across every path.</p></div>
+    <div><span class="finding-number">02 / Root cause</span><h3>Focus on recurring drivers</h3><p>The top five root causes account for 76.9% of incidents. Grouping the problem by recurring cause helps connect the analysis to targeted controls, training, engineering changes, or process redesign.</p></div>
+    <div><span class="finding-number">03 / Exposure</span><h3>Compare risk, not just volume</h3><p>Exposure-normalized incident rates help distinguish high activity from high risk. This makes site and process-path comparisons more defensible than ranking areas on counts alone.</p></div>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <h2>Pipeline architecture</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th scope="col">Layer</th><th scope="col">Purpose</th><th scope="col">Examples</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Raw</th><td>Load source CSVs into SQLite tables.</td><td>Incidents, hours worked, site details, exposure counts.</td></tr>
+        <tr><th scope="row">Staging</th><td>Standardize fields before analysis.</td><td>Trim/lowercase text, cast types, align column names, handle nulls and duplicates.</td></tr>
+        <tr><th scope="row">Integration</th><td>Join data at consistent analytical grains.</td><td>Site-period, site-week-hours, site-process-path, site-week-hours-process-path.</td></tr>
+        <tr><th scope="row">Context</th><td>Build distributions used to explain risk.</td><td>Root cause, severity, process path, contributing factor.</td></tr>
+        <tr><th scope="row">Features</th><td>Create reusable metrics for analysis.</td><td>Incident rates, process-path risk metrics, time-windowed calculations.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="case-section wrap">
+  <h2>Data quality &amp; reproducibility</h2>
+  <div class="method-columns">
+    <div><h3>Standardize before comparing</h3><p>The staging layer normalizes text values, enforces data types, creates consistent field names, and handles duplicates and missing data before those records reach the analysis layer.</p></div>
+    <div><h3>Make the workflow repeatable</h3><p>A main Python runner executes the transformation layers, while separate notebooks handle exploratory analysis, context analysis, process-path analysis, and data-health checks. The structure keeps business logic outside one-off spreadsheet work.</p></div>
+  </div>
+  <div class="callout"><strong>Public-data note:</strong> the repository intentionally uses synthetic data because operational safety records cannot be shared publicly. The portfolio value is in the pipeline design, metric logic, analysis method, and reproducibility.</div>
+  <div class="resource-links">
+    <a href="https://github.com/JudeMirac/Saftey-Risk-Analysis" target="_blank" rel="noopener">View GitHub repository ↗</a>
+    <a href="https://github.com/JudeMirac/Saftey-Risk-Analysis/blob/Safety-Analysis/README.md" target="_blank" rel="noopener">Read project documentation ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="wrap case-footer"><a href="../">Jude Mirac | Data Analyst</a><a href="mailto:judemirac20@gmail.com">Get in touch ↗</a></footer>
+</body>
+</html>
