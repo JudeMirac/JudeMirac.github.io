@@ -16,3 +16,30 @@
 
 /* Homepage project previews and introduction */
 .about-education{margin-top:18px;font-size:1rem}.project-preview{margin-top:24px}.preview-bar-row{margin-top:18px}.preview-bar-row>div:first-child{display:flex;justify-content:space-between;gap:16px;font-size:.82rem;margin-bottom:8px;color:#c8d3e2}.preview-track{height:12px;background:#36475f;border-radius:3px;overflow:hidden}.preview-track>span{display:block;height:100%}
+
+/* Compact portfolio: contact beside the introduction, three project columns. */
+.portfolio-home .hero{padding-block:48px;gap:48px}
+.hero-contact{width:auto;margin:0;flex-direction:column;padding:32px;gap:28px}
+.hero-contact h2{font-size:2rem}
+.hero-contact .contact-links{font-size:.88rem}
+.portfolio-home .work-section{padding-block:15px 48px}
+.portfolio-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.portfolio-projects .featured-project{display:flex;flex-direction:column;min-width:0;margin:0}
+.portfolio-projects .featured-copy{padding:24px;display:flex;flex-direction:column;flex:1}
+.portfolio-projects .project-kicker{flex-direction:column;gap:4px;margin-bottom:18px}
+.portfolio-projects h3{font-size:1.6rem;min-height:3.8rem;margin-bottom:16px}
+.portfolio-projects .featured-copy>p{font-size:.9rem}
+.portfolio-projects .tags{margin-top:auto;margin-bottom:20px}
+.portfolio-projects .button{align-self:flex-start}
+.portfolio-projects .featured-visual{padding:24px;justify-content:flex-start;min-height:390px}
+.portfolio-projects .visual-header{font-size:.72rem;margin-bottom:22px;gap:12px}
+.portfolio-projects .headline-metric{flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.portfolio-projects .headline-metric>strong{font-size:3.3rem}
+.portfolio-projects .headline-metric>div{font-size:.84rem}
+.portfolio-projects .chart-legend{flex-wrap:wrap;gap:12px;font-size:.7rem}
+.portfolio-projects .mini-metrics{margin-top:24px;padding-top:18px;gap:10px}
+.portfolio-projects .mini-metrics strong{font-size:1.4rem}
+.portfolio-projects .mini-metrics span{font-size:.7rem}
+.portfolio-projects .visual-note{margin-top:24px}
+@media(max-width:1050px) and (min-width:761px){.portfolio-projects{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-home .hero{gap:28px}.hero-contact{padding:24px}}
+@media(max-width:760px){.portfolio-projects{grid-template-columns:1fr}.portfolio-home .hero{padding-block:36px;gap:28px}.portfolio-projects h3{min-height:0}.portfolio-projects .featured-visual{min-height:0}.hero-contact{padding:28px}}
