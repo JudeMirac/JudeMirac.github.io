@@ -1,0 +1,14 @@
+View,Category,Transactions,Fraud Cases,Fraud Rate Percent
+Merchant category,Travel,588,47,7.993197
+Merchant category,Restaurants,614,45,7.32899
+Merchant category,Gas,635,45,7.086614
+Merchant category,Electronics,576,30,5.208333
+Merchant category,Groceries,674,49,7.27003
+Merchant category,Online Services,621,42,6.763285
+Merchant category,Clothing,623,46,7.383628
+Merchant category,Luxury,669,59,8.819133
+Transaction location,Domestic,4248,219,5.155367
+Transaction location,International,752,144,19.148936
+Model decision,ALLOW,4000,142,3.55
+Model decision,REVIEW,750,136,18.133333
+Model decision,BLOCK,250,85,34.0
