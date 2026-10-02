@@ -26,12 +26,12 @@
 
 <section class="snapshot wrap">
   <div class="snapshot-top">
-    <div><h2>Risk concentration snapshot</h2><p>Portfolio analysis · Synthetic workplace safety dataset</p></div>
+    <div><h2>Risk concentration snapshot</h2></div>
     <p class="small-note">The public dataset is synthetic. The analytical structure mirrors a real operational safety reporting workflow without exposing company data.</p>
   </div>
   <div class="kpi-grid">
-    <div class="kpi"><span class="kpi-label">Top process paths</span><strong>75.5%</strong><span class="kpi-note">of incidents concentrated in the top 10 paths</span></div>
-    <div class="kpi"><span class="kpi-label">Top root causes</span><strong>76.9%</strong><span class="kpi-note">of incidents concentrated in the top 5 causes</span></div>
+    <div class="kpi"><span class="kpi-label">Top process paths</span><strong>81.1%</strong><span class="kpi-note">of incidents concentrated in the top 10 paths</span></div>
+    <div class="kpi"><span class="kpi-label">Top root causes</span><strong>71.9%</strong><span class="kpi-note">of incidents concentrated in the top 5 causes</span></div>
     <div class="kpi"><span class="kpi-label">Primary method</span><strong>Rate</strong><span class="kpi-note">incident counts normalized by exposure hours</span></div>
     <div class="kpi"><span class="kpi-label">Pipeline</span><strong>SQL</strong><span class="kpi-note">staging, integration, context, and feature layers</span></div>
   </div>
@@ -41,7 +41,7 @@
 <section class="case-section wrap" id="dashboard" aria-labelledby="dashboard-title">
   <p class="eyebrow">Interactive Tableau dashboard</p>
   <h2 id="dashboard-title">Safety overview</h2>
-  <p>Explore FY2025 weekly incident counts and rates, then review the root-cause, severity, and contributing-factor snapshots. Hover over marks for details and scroll the root-cause chart to see every category.</p>
+  <p>This dashboard summarizes weekly workplace incidents and incident rates for FY2025, alongside the recorded root causes, severity codes, and contributing factors. The trend charts show how incident frequency changes over time; the category charts show the distribution within each source dataset.</p>
   <div style="overflow-x:auto;background:#fff;border:1px solid #d9e2ec;border-radius:12px;">
     <iframe title="Safety Risk Analysis Tableau dashboard" src="https://public.tableau.com/views/SafetyRiskAnalysisJudeMirac/SafetyOverview?:showVizHome=no&amp;:embed=true&amp;:toolbar=yes" width="1000" height="827" loading="lazy" style="display:block;width:100%;min-width:1000px;height:827px;border:0;" allowfullscreen></iframe>
   </div>
@@ -50,64 +50,33 @@
     <a href="../tableau/safety-analysis.csv" download>Download dashboard data</a>
     <a href="../tableau/safety-methods.md">Metric definitions and data checks</a>
   </div>
-  <div class="callout"><strong>Reading the dashboard:</strong> site trends cover 203 incidents and 1,651,921.908 exposure hours. The annual rate is 24.58 incidents per 200,000 hours, calculated from totals rather than averaging weekly rates. Root-cause and severity snapshots each total 199 incidents; contributing factors total 18. These are separate source populations, not additive categories. Severity C/D labels are retained as supplied. All data is synthetic.</div>
+
 </section>
 
-<section class="case-section wrap">
-  <p class="eyebrow">Business question</p>
-  <h2>Move from counts to risk</h2>
-  <div class="method-columns">
-    <div>
-      <h3>Why raw incident counts are not enough</h3>
-      <p>A process path can report more incidents simply because more hours are worked there. The project pairs incident counts with exposure data so comparisons reflect risk relative to operational activity, not volume alone.</p>
-      <p>The analysis also separates severity, root causes, and contributing factors so a high-frequency area can be reviewed differently from a lower-frequency but more severe area.</p>
-    </div>
-    <div>
-      <h3>What the pipeline produces</h3>
-      <p>Raw CSV files are loaded into SQLite, standardized in staging views, integrated across site and time dimensions, summarized into contextual distributions, and transformed into reusable risk features for analysis.</p>
-      <p>Python notebooks sit on top of those layers for exploration, data-health checks, process-path analysis, and interpretation.</p>
-    </div>
-  </div>
-</section>
 
-<section class="case-section wrap">
-  <p class="eyebrow">What the analysis shows</p>
-  <h2>Three ways to prioritize review</h2>
-  <div class="findings-grid">
-    <div><span class="finding-number">01 / Concentration</span><h3>Start where risk clusters</h3><p>The top 10 process paths account for 75.5% of incidents in the project analysis. That concentration creates a practical starting point for deeper review rather than spreading attention evenly across every path.</p></div>
-    <div><span class="finding-number">02 / Root cause</span><h3>Focus on recurring drivers</h3><p>The top five root causes account for 76.9% of incidents. Grouping the problem by recurring cause helps connect the analysis to targeted controls, training, engineering changes, or process redesign.</p></div>
-    <div><span class="finding-number">03 / Exposure</span><h3>Compare risk, not just volume</h3><p>Exposure-normalized incident rates help distinguish high activity from high risk. This makes site and process-path comparisons more defensible than ranking areas on counts alone.</p></div>
-  </div>
-</section>
+
+<section class="case-section wrap"><h2>What the analysis shows</h2><div class="findings-grid">
+<div><h3>Weekly incident counts</h3><p>The site series contains 203 incidents across 52 fiscal weeks. Week 29 has the highest count at 14, followed by week 10 at 10 and week 32 at 9. Across 1.65 million exposure hours, the overall rate is 24.58 incidents per 200,000 hours.</p></div>
+<div><h3>Incidents by process path</h3><p>The process-path records contain 201 incidents. Pick accounts for 49 and Stow to Prime for 41, together representing 44.8% of that total. The ten paths with the highest counts account for 163 incidents, or 81.1%.</p></div>
+<div><h3>Recorded root causes</h3><p>Of 199 root-cause records, 57 are labeled “Missing standards or procedures” and 36 “Inadequate implementation of procedure.” The five largest categories total 143 records, or 71.9%, including 13 labeled “Unspecified.”</p></div>
+<div><h3>Severity codes</h3><p>The severity snapshot contains 150 incidents coded D and 49 coded C, totaling 199. These are the source’s category labels; the data supplied here does not define their severity meaning.</p></div>
+<div><h3>Contributing factors</h3><p>The factor snapshot contains 18 records: 12 Human – Behaviour, 3 Organizational – Process, 2 Human – Leadership, and 1 Organizational – Workplace.</p></div>
+<div><h3>How the summaries relate</h3><p>The site, process-path, root-cause, severity, and factor files have different totals. Each chart describes its own records; the category totals are not added to the site total.</p></div>
+</div></section>
 
 <section class="case-section wrap">
   <h2>Pipeline architecture</h2>
   <div class="table-scroll">
-    <table>
-      <thead><tr><th scope="col">Layer</th><th scope="col">Purpose</th><th scope="col">Examples</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Raw</th><td>Load source CSVs into SQLite tables.</td><td>Incidents, hours worked, site details, exposure counts.</td></tr>
-        <tr><th scope="row">Staging</th><td>Standardize fields before analysis.</td><td>Trim/lowercase text, cast types, align column names, handle nulls and duplicates.</td></tr>
-        <tr><th scope="row">Integration</th><td>Join data at consistent analytical grains.</td><td>Site-period, site-week-hours, site-process-path, site-week-hours-process-path.</td></tr>
-        <tr><th scope="row">Context</th><td>Build distributions used to explain risk.</td><td>Root cause, severity, process path, contributing factor.</td></tr>
-        <tr><th scope="row">Features</th><td>Create reusable metrics for analysis.</td><td>Incident rates, process-path risk metrics, time-windowed calculations.</td></tr>
-      </tbody>
-    </table>
+    <table><thead><tr><th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Example</th></tr></thead><tbody>
+<tr><th scope="row">1. Load the data</th><td>Bring the original CSV files into the database.</td><td>Incident records, hours worked, and site details.</td></tr>
+<tr><th scope="row">2. Clean the fields</th><td>Make names, dates, and numbers consistent; check missing and repeated records.</td><td>Remove extra spaces and store hours as numbers.</td></tr>
+<tr><th scope="row">3. Connect the tables</th><td>Match records that describe the same site, week, or process path.</td><td>Place weekly incidents alongside the corresponding hours worked.</td></tr>
+<tr><th scope="row">4. Summarize the records</th><td>Count incidents within each recorded category.</td><td>Totals by root cause, severity code, or contributing factor.</td></tr>
+<tr><th scope="row">5. Calculate measures</th><td>Use the prepared data to calculate rates and time-based summaries.</td><td>Incidents per 200,000 hours and weekly trends.</td></tr></tbody></table>
   </div>
 </section>
 
-<section class="case-section wrap">
-  <h2>Data quality &amp; reproducibility</h2>
-  <div class="method-columns">
-    <div><h3>Standardize before comparing</h3><p>The staging layer normalizes text values, enforces data types, creates consistent field names, and handles duplicates and missing data before those records reach the analysis layer.</p></div>
-    <div><h3>Make the workflow repeatable</h3><p>A main Python runner executes the transformation layers, while separate notebooks handle exploratory analysis, context analysis, process-path analysis, and data-health checks. The structure keeps business logic outside one-off spreadsheet work.</p></div>
-  </div>
-  <div class="callout"><strong>Public-data note:</strong> the repository intentionally uses synthetic data because operational safety records cannot be shared publicly. The portfolio value is in the pipeline design, metric logic, analysis method, and reproducibility.</div>
-  <div class="resource-links">
-    <a href="https://github.com/JudeMirac/Saftey-Risk-Analysis" target="_blank" rel="noopener">View GitHub repository ↗</a>
-    <a href="https://github.com/JudeMirac/Saftey-Risk-Analysis/blob/Safety-Analysis/README.md" target="_blank" rel="noopener">Read project documentation ↗</a>
-  </div>
-</section>
+
 </main>
 
 <footer class="wrap case-footer"><a href="../">Jude Mirac | Data Analyst</a><a href="mailto:judemirac20@gmail.com">Get in touch ↗</a></footer>
