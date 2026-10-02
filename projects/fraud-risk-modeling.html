@@ -52,7 +52,7 @@
   </div>
 </section>
 
-<section class="case-section wrap" id="dashboard"><p class="eyebrow">Interactive Tableau dashboard</p><h2>Fraud risk overview</h2><p>Compare observed fraud rates across merchant categories and domestic versus international transactions, then explore the transaction counts and fraud rates within the model’s ALLOW, REVIEW, and BLOCK tiers.</p><div class="embed-shell"><iframe title="Fraud Risk Modeling Tableau dashboard" src="https://public.tableau.com/views/FraudRiskModelingJudeMirac/FraudOverview?:showVizHome=no&amp;:embed=true&amp;:toolbar=yes" width="1000" height="827" loading="lazy" allowfullscreen></iframe></div><p class="data-source-note">Merchant and location summaries use the 5,000 source transactions. Decision-tier charts reproduce the notebook’s saved evaluation on the full dataset, which includes training records.</p><div class="resource-links"><a href="https://public.tableau.com/app/profile/jude.mirac/viz/FraudRiskModelingJudeMirac/FraudOverview#1" target="_blank" rel="noopener">Open in Tableau Public ↗</a><a href="https://github.com/JudeMirac/Fraud-Model-Project" target="_blank" rel="noopener">View project on GitHub ↗</a><a href="../tableau/fraud-dashboard.csv" download>Download chart data ↓</a><a href="../tableau/fraud-methods.md">Data and calculation notes ↗</a></div></section>
+<section class="case-section wrap" id="dashboard"><p class="eyebrow">Interactive Tableau dashboard</p><h2>Fraud risk overview</h2><p>Compare observed fraud rates across merchant categories and domestic versus international transactions, then explore the transaction counts and fraud rates within the model’s ALLOW, REVIEW, and BLOCK tiers.</p><div class="embed-shell"><iframe title="Fraud Risk Modeling Tableau dashboard" src="https://public.tableau.com/views/FraudRiskModelingJudeMirac/FraudOverview?:showVizHome=no&amp;:embed=true&amp;:toolbar=yes" width="1000" height="827" loading="lazy" allowfullscreen></iframe></div><div class="resource-links"><a href="https://public.tableau.com/app/profile/jude.mirac/viz/FraudRiskModelingJudeMirac/FraudOverview#1" target="_blank" rel="noopener">Open in Tableau Public ↗</a><a href="https://github.com/JudeMirac/Fraud-Model-Project" target="_blank" rel="noopener">View project on GitHub ↗</a><a href="../tableau/fraud-dashboard.csv" download>Download chart data ↓</a></div></section>
 <section class="case-section wrap">
   <p class="eyebrow">Analytics workflow</p>
   <h2>From describing fraud to deciding what to do</h2>
@@ -63,22 +63,7 @@
   </div>
 </section>
 
-<section class="case-section wrap">
-  <p class="eyebrow">Prescriptive layer</p>
-  <h2>Model output becomes an operating policy</h2>
-  <div class="method-columns">
-    <div>
-      <h3>Balance fraud capture with review capacity</h3>
-      <p>The policy reserves manual review for 15% of transactions and blocking for the riskiest 5%, allowing the remaining 80% to move through automatically.</p>
-      <p>This makes the decision rule usable by an operations team because queue size is explicit rather than left to an arbitrary probability threshold.</p>
-    </div>
-    <div>
-      <h3>Validate the ranking</h3>
-      <p>Fraud rates rise from low to high risk tiers, supporting the usefulness of the ranking-based policy. In the project evaluation, review and block tiers captured 61% of fraudulent transactions.</p>
-      <p>The result demonstrates a decision framework; it is not a claim about production fraud performance.</p>
-    </div>
-  </div>
-</section>
+
 
 <section class="case-section wrap">
   <h2>Methods &amp; tools</h2>
